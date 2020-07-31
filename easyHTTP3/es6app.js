@@ -35,7 +35,7 @@ class EasyHTTP {
 
   }
 
-  put(url, data) {
+  async put(url, data) {
 
     const response = await fetch(url, {
       method: "PUT",
@@ -52,10 +52,10 @@ class EasyHTTP {
 
   }
 
-  delete(url) {
+  async delete(url) {
 
     const response = await fetch(url, {
-      method: "POST",
+      method: "DELETE",
       header: {
         "Content-type": "application/json",
       }
